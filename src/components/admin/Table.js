@@ -2,30 +2,32 @@ import React, { Component } from 'react';
 
 class Table extends React.Component {
 
-    renderState(state) {
-        if (state == 'OK') {
+    renderState(status) {
+        if (status) {
             return (
                     <td style={{color: "#00ff00"}}>
-                    {state}
+                    {'OK'}
                 </td>
             );
         }
+
         return (
                 <td style={{color: "#ff0000"}}>
-                {state}
+                {'NG'}
             </td>
         );
     }
 
     render() {
         let tableName = this.props.name;
-        let state = this.props.state;
+        let status = this.props.status;
+
         return (
                 <div>
                 <td>
                 {tableName}
             </td>
-                {this.renderState(state)}
+                {this.renderState(status)}
                 </div>
         );
     }
