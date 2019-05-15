@@ -14,11 +14,15 @@ class Classroom extends React.Component {
     render () {
         return (
                 <div>
-                <h1>{"Admin Page"}</h1>
-                {this.rederTable("H01", "OK")}
-            {this.rederTable("G01", "NG")}
-            {this.rederTable("H02", "NG")}
-            {this.rederTable("H02", "OK")}
+                <h1>{'Admin Page'}</h1>
+                <div>
+                <table>
+                <tr>{this.rederTable('H01', 'OK')}</tr>
+                <tr>{this.rederTable('G01', 'NG')}</tr>
+                <tr>{this.rederTable('H02', 'NG')}</tr>
+                <tr>{this.rederTable('H02', 'OK')}</tr>
+                </table>
+                </div>
                 </div>
         );
     }
