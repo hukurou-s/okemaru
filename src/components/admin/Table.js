@@ -5,15 +5,15 @@ class Table extends React.Component {
     renderState(status) {
         if (status) {
             return (
-                    <td style={{color: "#00ff00"}}>
-                    {'OK'}
+                <td style={{color: "#00ff00"}}>
+                  {'OK'}
                 </td>
             );
         }
 
         return (
-                <td style={{color: "#ff0000"}}>
-                {'NG'}
+            <td style={{color: "#ff0000"}}>
+              {'NG'}
             </td>
         );
     }
@@ -23,12 +23,12 @@ class Table extends React.Component {
         let status = this.props.status;
 
         return (
-                <div>
-                <td>
+            <tr>
+              <td>
                 {tableName}
-            </td>
-                {this.renderState(status)}
-                </div>
+              </td>
+              {this.renderState(status)}
+            </tr>
         );
     }
 }

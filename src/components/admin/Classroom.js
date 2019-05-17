@@ -30,17 +30,19 @@ class Classroom extends React.Component {
         const tables = this.state.tables;
         const statuses = this.state.statuses;
         return (
-                <div>
-                <h1>{'Admin Page'}</h1>
-                <div>
+            <div>
+              <h1>{'Admin Page'}</h1>
+              <div>
                 <table>
-                <tr>{this.renderTable({name: tables[0], status: statuses[0]})}</tr>
-                <tr>{this.renderTable({name: tables[1], status: statuses[1]})}</tr>
-                <tr>{this.renderTable({name: tables[2], status: statuses[2]})}</tr>
-                <tr>{this.renderTable({name: tables[3], status: statuses[3]})}</tr>
+                  <tbody>
+                    {this.renderTable({name: tables[0], status: statuses[0]})}
+                    {this.renderTable({name: tables[1], status: statuses[1]})}
+                    {this.renderTable({name: tables[2], status: statuses[2]})}
+                    {this.renderTable({name: tables[3], status: statuses[3]})}
+                  </tbody>
                 </table>
-                </div>
-                </div>
+              </div>
+            </div>
         );
     }
 }

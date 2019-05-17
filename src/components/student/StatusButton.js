@@ -29,20 +29,20 @@ class StatusButton extends React.Component {
 	  }
 
     setTableName (tableName) {
-            this.setState({table: tableName});
+        this.setState({table: tableName});
     }
 
     render() {
         console.log(this.state);
         if (this.state.table) {
             return (
-                    <button onClick={this.handleClick}>
-                    {this.state.isOK ? 'NG' : 'OK'}
+                <button onClick={this.handleClick}>
+                  {this.state.isOK ? 'NG' : 'OK'}
                 </button>
             );
         }
         return (
-                <StudentForm setTableName={this.setTableName} />
+            <StudentForm setTableName={this.setTableName} />
         );
     }
 }

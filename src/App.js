@@ -7,10 +7,10 @@ function App() {
     return (
         <BrowserRouter>
             <div>
-            <Route exact path='/' render={() => <StatusButton />} />
-            <Route path='/admin' render={() => <Classroom />} />
+              <Route exact path='/' render={() => <StatusButton />} />
+              <Route path='/admin' render={() => <Classroom />} />
             </div>
-            </BrowserRouter>
+        </BrowserRouter>
     );
 }
 

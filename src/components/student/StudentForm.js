@@ -7,6 +7,7 @@ class StudentForm extends React.Component {
         this.state = {
             table: "",
         };
+
         this.handleSubmit = this.handleSubmit.bind(this);
         this.handleChange = this.handleChange.bind(this);
     }
@@ -22,65 +23,65 @@ class StudentForm extends React.Component {
 
     render() {
         return(
-                <form action="javascript:void(0)" onSubmit={this.handleSubmit}>
+            <form action="javascript:void(0)" onSubmit={this.handleSubmit}>
 
-                <div>
+              <div>
                 <label>
-                <input
-            type="radio"
-            name="tableName"
-            value="G01"
-            checked={this.state.table === "G01"}
-            onChange={this.handleChange}
-                />
-                G01
-            </label>
-                </div>
+                  <input
+                    type="radio"
+                    name="tableName"
+                    value="G01"
+                    checked={this.state.table === "G01"}
+                    onChange={this.handleChange}
+                  />
+                  G01
+                </label>
+              </div>
 
-                <div>
+              <div>
                 <label>
-                <input
-            type="radio"
-            name="tableName"
-            value="H01"
-            checked={this.state.table === "H01"}
-            onChange={this.handleChange}
-                />
-                H01
-            </label>
-                </div>
+                  <input
+                    type="radio"
+                    name="tableName"
+                    value="H01"
+                    checked={this.state.table === "H01"}
+                    onChange={this.handleChange}
+                  />
+                  H01
+                </label>
+              </div>
 
-                <div>
+              <div>
                 <label>
-                <input
-            type="radio"
-            name="tableName"
-            value="G02"
-            checked={this.state.table === "G02"}
-            onChange={this.handleChange}
-                />
-                G02
-            </label>
-                </div>
+                  <input
+                    type="radio"
+                    name="tableName"
+                    value="G02"
+                    checked={this.state.table === "G02"}
+                    onChange={this.handleChange}
+                  />
+                  G02
+                </label>
+              </div>
 
-                <div>
+              <div>
                 <label>
-                <input
-            type="radio"
-            name="tableName"
-            value="H02"
-            checked={this.state.table === "H02"}
-            onChange={this.handleChange}
-                />
-                H02
-            </label>
-                </div>
+                  <input
+                    type="radio"
+                    name="tableName"
+                    value="H02"
+                    checked={this.state.table === "H02"}
+                    onChange={this.handleChange}
+                  />
+                  H02
+                </label>
+              </div>
 
-                <div>
+              <div>
                 <button type="submit">
-                Save
-            </button>
-                </div>
+                  Save
+                </button>
+              </div>
 
             </form>
         );
