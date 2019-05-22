@@ -1,7 +1,7 @@
+import { combineReducers } from 'redux';
 import classroom from './classroom';
-import { combineReducer } from 'redux-act';
 
-export default combineReducer({
+export default combineReducers({
     classroom,
 });
 
