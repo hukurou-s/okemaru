@@ -15,7 +15,7 @@ class StatusButton extends React.Component {
 
     send(status){
         this.socket.emit('changeState',{
-            table: this.state.table,
+            name: this.state.table,
             status: status.isOK,
         });
     }

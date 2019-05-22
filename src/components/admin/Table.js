@@ -1,8 +1,10 @@
+import _ from 'lodash';
 import React, { Component } from 'react';
+import { connect } from 'react-redux';
 
 class Table extends React.Component {
 
-    renderState(status) {
+    renderStatus(status) {
         if (status) {
             return (
                 <td style={{color: "#00ff00"}}>
@@ -19,18 +21,25 @@ class Table extends React.Component {
     }
 
     render() {
-        let tableName = this.props.name;
-        let status = this.props.status;
+        const { classroom: tables } = this.props;
+        var tablelist = [];
+        _.each(tables, (t, i) => {
+            tablelist.push(
+                <tr key={i}>
+                  <td>
+                    {t.name}
+                  </td>
+                  {this.renderStatus(t.status)}
+                </tr>
+            );
+        });
 
         return (
-            <tr>
-              <td>
-                {tableName}
-              </td>
-              {this.renderState(status)}
-            </tr>
+            <tbody>
+              {tablelist}
+            </tbody>
         );
     }
 }
 
-export default Table;
+export default connect(state => state)(Table);

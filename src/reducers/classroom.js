@@ -6,10 +6,10 @@ import immer from 'immer';
 const classroom = createReducer(
     {
         [actions.updateClassroom]: (state, payload) => {
-            const {tabelName, status} = payload;
+            const table = payload;
             const newState = immer(state, draft => {
-                const index = state.tables.findIndex(({name}) => name === this.tableName);
-                draft[index] = {name: this.tableName, status: status};
+                const index = state.findIndex(({name}) => name === table.name);
+                draft[index] = table;
             });
             return newState;
         },

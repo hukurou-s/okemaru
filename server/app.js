@@ -11,9 +11,10 @@ const io = socket(server);
 
 io.on('connection',(socket) => {
     console.log('Acces to User:', socket.client.id);
-    socket.on('changeState',(table, status) => {
-        //メッセージ受信時の処理
-        console.log('message', table, status);
-        io.emit('changeState', {table: table, status: status,});
+    socket.on('changeState', (message) => {
+        console.log('message', message);
+        const table = message.name;
+        const status = message.status;
+        io.emit('changeState', {name: table, status: status});
     });
 });
